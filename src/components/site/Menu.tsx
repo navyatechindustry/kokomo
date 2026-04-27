@@ -44,17 +44,17 @@ const DRINKS: Item[] = Object.entries(drinkImages).map(([path, img]) => ({
 }));
 
 export function Menu() {
-  const [tab, setTab] = useState<"food" | "drinks">("food");
   const ref = useReveal<HTMLDivElement>();
-  const items = tab === "food" ? FOOD : DRINKS;
+  
+  const allItems = useMemo(() => [...FOOD, ...DRINKS], []);
 
   const galleryItems = useMemo(
     () =>
-      items.map((item) => ({
+      allItems.map((item) => ({
         image: item.img,
-        text: item.name,
+        text: "", // Names removed as requested
       })),
-    [items],
+    [allItems],
   );
 
   return (
@@ -76,24 +76,9 @@ export function Menu() {
               Comfort food, <span className="italic text-gradient-gold">crafted slowly.</span>
             </h2>
           </div>
-          <div className="reveal reveal-delay-2 inline-flex glass rounded-full p-1.5 self-start">
-            {(["food", "drinks"] as const).map((t) => (
-              <button
-                key={t}
-                onClick={() => setTab(t)}
-                className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.25em] transition-all duration-500 ${
-                  tab === t
-                    ? "bg-[var(--gradient-gold)] text-white shadow-[var(--shadow-glow)]"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
         </div>
 
-        <div key={tab} className="relative h-[450px] md:h-[600px] w-full animate-fade-in">
+        <div className="relative h-[450px] md:h-[600px] w-full animate-fade-in">
           <CircularGallery
             items={galleryItems}
             bend={3}
