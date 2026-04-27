@@ -304,30 +304,30 @@
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: 1.25rem;
+    padding-inline: 1.5rem;
   }
   @media (min-width: 768px) {
     .container-luxe {
-      padding-inline: 3rem;
+      padding-inline: 4rem;
     }
   }
   @media (min-width: 1280px) {
     .container-luxe {
-      padding-inline: 5rem;
+      padding-inline: 6rem;
     }
   }
 
   .section-pad {
-    padding-block: 4rem;
+    padding-block: clamp(3rem, 8vh, 5rem);
   }
   @media (min-width: 768px) {
     .section-pad {
-      padding-block: 7rem;
+      padding-block: clamp(6rem, 12vh, 8rem);
     }
   }
   @media (min-width: 1280px) {
     .section-pad {
-      padding-block: 10rem;
+      padding-block: clamp(8rem, 15vh, 12rem);
     }
   }
 

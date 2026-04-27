@@ -52,9 +52,8 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-gold mb-6">Visit</p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Bandra West, Mumbai
+                Santacruz East, Mumbai
                 <br />
                 Open daily · 11 AM – 11 PM
               </p>

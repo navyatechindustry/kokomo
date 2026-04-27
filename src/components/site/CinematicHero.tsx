@@ -255,7 +255,7 @@ export function CinematicHero() {
 
       <section
         ref={containerRef}
-        className="relative h-screen w-full flex items-end pb-24 overflow-hidden"
+        className="relative min-h-[100svh] w-full flex items-end pb-32 md:pb-24 overflow-hidden"
       >
         <div
           className="container-luxe transition-all duration-1000 ease-out"
@@ -265,23 +265,23 @@ export function CinematicHero() {
           }}
         >
           <div className="max-w-4xl">
-            <p className="text-xs md:text-sm uppercase tracking-[0.5em] text-gold mb-6 animate-slide-up">
+            <p className="text-[10px] md:text-sm uppercase tracking-[0.5em] text-gold mb-6 animate-slide-up">
               — Mumbai · Aesthetic Sanctuary
             </p>
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-medium text-white leading-[0.95] tracking-tight">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-medium text-white leading-[0.95] tracking-tight">
               Where Coffee
               <br />
               <span className="italic text-gradient-gold">Meets Calm.</span>
             </h1>
-            <p className="mt-10 max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed font-light">
+            <p className="mt-8 md:mt-10 max-w-2xl text-base md:text-xl text-white/70 leading-relaxed font-light">
               Aesthetic escapes, cozy corners, and conversations that linger. Pull up a chair, order
               a slow brew, and stay a while.
             </p>
 
-            <div className="mt-12 flex flex-col sm:flex-row gap-6">
+            <div className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 md:gap-6">
               <a
                 href="#location"
-                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-10 py-5 text-sm uppercase tracking-[0.3em] font-semibold text-white bg-gold/90 transition-all duration-500 hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 md:px-10 md:py-5 text-xs md:text-sm uppercase tracking-[0.3em] font-semibold text-white bg-gold/90 transition-all duration-500 hover:scale-105"
               >
                 Visit Us →
               </a>
@@ -289,7 +289,7 @@ export function CinematicHero() {
                 href={BOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-10 py-5 text-sm uppercase tracking-[0.3em] font-semibold text-white glass transition-all duration-500 hover:text-gold"
+                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 md:px-10 md:py-5 text-xs md:text-sm uppercase tracking-[0.3em] font-semibold text-white glass transition-all duration-500 hover:text-gold"
               >
                 Book a Table
               </a>
@@ -297,12 +297,13 @@ export function CinematicHero() {
           </div>
         </div>
 
+        {/* Scroll indicator - hidden on very short screens to avoid overlap */}
         <div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-3 text-white/40 transition-opacity duration-700"
+          className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 z-30 hidden sm:flex flex-col items-center gap-3 text-white/40 transition-opacity duration-700"
           style={{ opacity: textOpacity }}
         >
           <span className="text-[10px] uppercase tracking-[0.5em]">Scroll to Experience</span>
-          <div className="w-[1px] h-12 bg-white/20 relative overflow-hidden">
+          <div className="w-[1px] h-8 md:h-12 bg-white/20 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-gold animate-scroll-indicator" />
           </div>
         </div>

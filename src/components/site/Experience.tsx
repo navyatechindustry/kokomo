@@ -46,7 +46,7 @@ export function Experience() {
           {BLOCKS.map((b, i) => (
             <article
               key={b.title}
-              className={`reveal reveal-delay-${i + 1} group relative h-[520px] md:h-[600px] overflow-hidden rounded-2xl lift`}
+              className={`reveal reveal-delay-${i + 1} group relative aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-2xl lift`}
             >
               <img
                 src={b.img}
@@ -54,16 +54,16 @@ export function Experience() {
                 loading="lazy"
                 width={1024}
                 height={1280}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-110"
               />
               <div
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.92) 100%)",
+                    "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.92) 100%)",
                 }}
               />
-              <div className="absolute inset-x-0 bottom-0 p-7 md:p-8">
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
                 <p className="text-[10px] uppercase tracking-[0.35em] text-gold mb-3">{b.kicker}</p>
                 <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-3 leading-tight">
                   {b.title}

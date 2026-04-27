@@ -60,7 +60,7 @@ export function Location() {
           </a>
         </div>
 
-        <div className="lg:col-span-3 reveal reveal-delay-2 relative rounded-2xl overflow-hidden border border-white/10 min-h-[420px] lift">
+        <div className="lg:col-span-3 reveal reveal-delay-2 relative rounded-2xl overflow-hidden border border-white/10 aspect-video sm:aspect-square lg:aspect-auto min-h-[400px] lift">
           <iframe
             title="Café Kokomo location"
             src={MAP_EMBED}
