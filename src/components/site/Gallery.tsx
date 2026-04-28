@@ -6,21 +6,6 @@ const ambianceImages = import.meta.glob("@/assets/ambiance/*.{png,jpg,jpeg,webp}
   import: "default",
 });
 
-const formatName = (path: string) => {
-  const fileName = path.split("/").pop()?.split(".")[0] || "";
-  if (
-    /^\d{4}-\d{2}-\d{2}$/.test(fileName) ||
-    fileName.includes("unnamed") ||
-    fileName.startsWith("img_")
-  ) {
-    return "Kokomo Vibe";
-  }
-  return fileName
-    .replace(/[-_]/g, " ")
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
 
 const ITEMS = Object.entries(ambianceImages).map(([path, img]) => ({
   image: img as string,

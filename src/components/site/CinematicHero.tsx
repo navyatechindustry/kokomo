@@ -24,9 +24,12 @@ export function CinematicHero() {
   const videoRef1 = useRef<HTMLVideoElement>(null);
   const videoRef2 = useRef<HTMLVideoElement>(null);
 
+  const textContainerRef = useRef<HTMLDivElement>(null);
+  const scrollIndicatorRef = useRef<HTMLDivElement>(null);
+  const videoLayerRef = useRef<HTMLDivElement>(null);
+
   const [activeVideo, setActiveVideo] = useState(1);
   const [isClient, setIsClient] = useState(false);
-  const [lerpProgress, setLerpProgress] = useState(0);
 
   const targetProgressRef = useRef(0);
   const currentProgressRef = useRef(0);
@@ -100,9 +103,32 @@ export function CinematicHero() {
       currentProgressRef.current = lerp(
         currentProgressRef.current,
         targetProgressRef.current,
-        0.055,
+        0.08,
       );
-      setLerpProgress(currentProgressRef.current);
+      const currentLerp = currentProgressRef.current;
+
+      // Direct DOM manipulation to bypass React state updates for ultra-smooth performance
+      if (videoLayerRef.current) {
+        const vOpacity = Math.max(0, 1 - currentLerp * 60);
+        videoLayerRef.current.style.opacity = vOpacity.toString();
+      }
+
+      if (canvasRef.current) {
+        const cOpacity = Math.min(1, currentLerp * 60);
+        canvasRef.current.style.opacity = cOpacity.toString();
+        canvasRef.current.style.filter = currentLerp < 0.01 ? "blur(10px)" : "none";
+      }
+
+      if (textContainerRef.current) {
+        const textOpacity = Math.max(0, 1 - currentLerp * 12);
+        textContainerRef.current.style.opacity = textOpacity.toString();
+        textContainerRef.current.style.transform = `translateY(${currentLerp * -300}px) scale(${1 - currentLerp * 0.15})`;
+      }
+
+      if (scrollIndicatorRef.current) {
+        const textOpacity = Math.max(0, 1 - currentLerp * 12);
+        scrollIndicatorRef.current.style.opacity = textOpacity.toString();
+      }
 
       const exactFrame = currentProgressRef.current * (allImages.length - 1);
       const idxA = Math.floor(exactFrame);
@@ -210,16 +236,11 @@ export function CinematicHero() {
     return <section className="h-screen w-full bg-black" />;
   }
 
-  // Factor 60 for an even tighter transition as scrolling starts
-  const vOpacity = Math.max(0, 1 - lerpProgress * 60);
-  const cOpacity = Math.min(1, lerpProgress * 60);
-  const textOpacity = Math.max(0, 1 - lerpProgress * 12);
-
   return (
     <div id="home" className="relative">
       <div className="fixed inset-0 z-[-1] pointer-events-none bg-black overflow-hidden">
         {/* Seamless Video Layer */}
-        <div className="absolute inset-0 z-0 bg-black" style={{ opacity: vOpacity }}>
+        <div ref={videoLayerRef} className="absolute inset-0 z-0 bg-black" style={{ opacity: 1 }}>
           <video
             ref={videoRef1}
             src={videoUrl}
@@ -244,8 +265,8 @@ export function CinematicHero() {
           ref={canvasRef}
           className="absolute inset-0 z-10 h-full w-full object-cover pointer-events-none"
           style={{
-            opacity: cOpacity,
-            filter: lerpProgress < 0.01 ? "blur(10px)" : "none", // Pre-blur for first frame
+            opacity: 0,
+            filter: "blur(10px)", // Pre-blur for first frame
           }}
         />
 
@@ -258,10 +279,11 @@ export function CinematicHero() {
         className="relative min-h-[100svh] w-full flex items-end pb-32 md:pb-24 overflow-hidden"
       >
         <div
+          ref={textContainerRef}
           className="container-luxe transition-all duration-1000 ease-out"
           style={{
-            opacity: textOpacity,
-            transform: `translateY(${lerpProgress * -300}px) scale(${1 - lerpProgress * 0.15})`,
+            opacity: 1,
+            transform: `translateY(0px) scale(1)`,
           }}
         >
           <div className="max-w-4xl">
@@ -299,8 +321,9 @@ export function CinematicHero() {
 
         {/* Scroll indicator - hidden on very short screens to avoid overlap */}
         <div
+          ref={scrollIndicatorRef}
           className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 z-30 hidden sm:flex flex-col items-center gap-3 text-white/40 transition-opacity duration-700"
-          style={{ opacity: textOpacity }}
+          style={{ opacity: 1 }}
         >
           <span className="text-[10px] uppercase tracking-[0.5em]">Scroll to Experience</span>
           <div className="w-[1px] h-8 md:h-12 bg-white/20 relative overflow-hidden">
