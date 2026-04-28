@@ -14,8 +14,27 @@ const LINKS = [
 export function Footer() {
   return (
     <footer className="relative pt-20 pb-10">
-      <div className="container-luxe">
-        <div className="bg-black/40 backdrop-blur-2xl border border-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-2xl">
+      <div className="container-luxe relative">
+        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center pointer-events-none select-none px-8 md:px-16 overflow-hidden">
+          <section style={{ fontSize: "12px", color: "rgba(255,255,255,0.6)", marginTop: "40px" }} className="w-full text-center">
+            <h2>Best Cafe in Santacruz East, Mumbai</h2>
+            <p>
+              Cafe Kokomo is one of the best cafes in Santacruz East Mumbai, offering specialty coffee, meals, and desserts in a modern and comfortable environment near Vakola Bridge.
+            </p>
+
+            <h3 className="mt-4">Cafe Near Vakola Bridge</h3>
+            <p>
+              Located in Santacruz East, Cafe Kokomo is a popular destination for students, professionals, and couples looking for a cafe near Vakola with a premium and work-friendly atmosphere.
+            </p>
+
+            <h3 className="mt-4">Premium Coffee Experience in Mumbai</h3>
+            <p>
+              Known for its quality coffee and aesthetic space, Cafe Kokomo delivers a premium cafe experience in Mumbai, ideal for work, relaxation, and social meetups.
+            </p>
+          </section>
+        </div>
+
+        <div className="relative z-10 bg-black/40 backdrop-blur-2xl border border-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 pb-12">
             <div>
               <p className="font-serif text-4xl md:text-5xl text-foreground">
