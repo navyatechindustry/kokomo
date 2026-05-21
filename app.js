@@ -18,7 +18,9 @@ const FALLBACK_REGISTRY = {
     'coffee_capucinno.jpeg',
     '2026-03-04.jpg',
     'IMG_20210923_173059_815.jpg',
-    'unnamed_(11).jpg'
+    'unnamed_(11).jpg',
+    'img_20.jpg',
+    'Screenshot 2026-05-21 150426.png'
   ],
   'signature-drinks': [
     'matcha.jpg',
@@ -32,7 +34,6 @@ const FALLBACK_REGISTRY = {
     'img_4.jpg',
     'img_13.jpg',
     'img_17.jpg',
-    'img_20.jpg',
     'img_22.jpg',
     'nutella_cheesecake.png',
     'oreo_shake.jpeg',
@@ -53,16 +54,11 @@ const FALLBACK_REGISTRY = {
     'pasta.jpg',
     'burger.jpg',
     'toast.jpg',
-    'pancakes.jpg',
-    'veg_bao.jpeg',
-    'loaded_fries.jpeg',
     'loaded_nachos.jpeg',
     'hummus_and_pita.jpeg',
-    'nachos_with_hummus.jpg',
     'crunch_blobs.jpg',
     'img_8.jpg',
     'img_9.jpg',
-    'img_16.jpg',
     'img_19.jpg',
     'img_21.jpg',
     'unnamed.jpg',
@@ -83,7 +79,8 @@ const FALLBACK_REGISTRY = {
     'unnamed_(5).jpg',
     'Screenshot 2026-05-21 012043.png',
     'Screenshot 2026-05-21 114728.png',
-    'Screenshot 2026-05-21 114739.png'
+    'Screenshot 2026-05-21 114739.png',
+    'Screenshot 2026-05-21 150545.png'
   ]
 };
 
@@ -132,6 +129,13 @@ const METADATA_REGISTRY = {
     price: "₹340",
     desc: "House-steeped Madagascar vanilla bean syrup folded into micro-foamed milk and our signature house espresso.",
     tag: "Sweet Curation"
+  },
+  'Screenshot 2026-05-21 150426.png': {
+    title: "Iced Mocha Brown Butter Latte",
+    price: "₹345",
+    desc: "Rich double shot of house espresso, creamy milk, and decadent dark chocolate ganache, infused with our signature nutty brown butter syrup.",
+    tag: "House Brew",
+    badge: "Barista Favorite"
   },
 
   // Signature Drinks
@@ -321,24 +325,6 @@ const METADATA_REGISTRY = {
     desc: "Toasted local country sourdough, smashed organic avocados, heirloom cherry tomatoes, organic seeds, and micro-shoots.",
     tag: "Editorial Craft"
   },
-  'pancakes.jpg': {
-    title: "Wild Berry Canopy Pancakes",
-    price: "₹460",
-    desc: "Fluffy soufflé-style pancakes served with fresh forest berry compote and whipped organic mascarpone cheese.",
-    tag: "Sweet Canopy"
-  },
-  'veg_bao.jpeg': {
-    title: "Steamed Shiitake Bao",
-    price: "₹420",
-    desc: "Soft pillows of steamed wheat buns stuffed with slow-braised shiitake mushrooms, pickled cucumber, and dark soy glaze.",
-    tag: "Steamed Bun"
-  },
-  'loaded_fries.jpeg': {
-    title: "Truffle Parmesan Hand-Cut Fries",
-    price: "₹380",
-    desc: "Crispy double-cooked Russet potato skin-on fries, tossed in white truffle oil and finely grated 24-month aged Parmigiano.",
-    tag: "Truffle Hand-Cut"
-  },
   'loaded_nachos.jpeg': {
     title: "Kokomo. Canopy Loaded Nachos",
     price: "₹460",
@@ -350,12 +336,6 @@ const METADATA_REGISTRY = {
     price: "₹440",
     desc: "Velvety smooth chickpea and organic tahini dip, extra virgin olive oil, sumac, served with house-made warm sourdough pita.",
     tag: "Mediterranean"
-  },
-  'nachos_with_hummus.jpg': {
-    title: "Mediterranean Corn Crisps",
-    price: "₹420",
-    desc: "Stone-ground corn chips served alongside our velvety smooth house hummus and a zesty green herb sauce.",
-    tag: "Light Bite"
   },
   'crunch_blobs.jpg': {
     title: "Crispy Cauliflower Fritters",
@@ -374,12 +354,6 @@ const METADATA_REGISTRY = {
     price: "₹490",
     desc: "Steamed organic red quinoa, fresh avocado, ruby pomegranate seeds, roasted almonds, and light ginger sesame dressing.",
     tag: "Wellness Bowl"
-  },
-  'img_16.jpg': {
-    title: "Smoked Salmon Crostini",
-    price: "₹540",
-    desc: "Artisanal toasted sourdough points topped with whipped herb cream cheese, premium Norwegian smoked salmon, and fresh dill.",
-    tag: "Crostini"
   },
   'img_19.jpg': {
     title: "Crispy Tofu Bao Triad",
@@ -498,6 +472,13 @@ const METADATA_REGISTRY = {
     price: "₹420",
     desc: "Sponge cake soaked in three premium milks, topped with fresh whipped cream and toasted Balinese coconut flakes.",
     tag: "Balinese Curation"
+  },
+  'Screenshot 2026-05-21 150545.png': {
+    title: "World's Best Chocolate Cake",
+    price: "₹450",
+    desc: "Indulgent, gooey, warm semi-liquid chocolate cake crafted with premium Callebaut chocolate and a delicate hint of Maldon sea salt.",
+    tag: "Decadent",
+    badge: "Warm Curation"
   }
 };
 
