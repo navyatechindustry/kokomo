@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Brand Metadata -->
+  <title>Cafe Kokomo.</title>
+  <meta name="description"
+    content="Experience editorial hospitality, modern tropical minimalism, and high-end sensory curation in the heart of Mumbai. Visit Cafe Kokomo. for signature micro-brews, botanical mocktails, and luxury ambiance.">
+  <meta name="keywords"
+    content="Cafe Kokomo., Luxury Cafe Mumbai, Tropical Cafe Mumbai, Santacruz East Cafe, Coffee Shop Vakola, Aesthetic Cafe Mumbai, Soho House Mumbai style, Bali minimalist cafe">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cafekokomo.com/">
+  <meta property="og:title" content="Cafe Kokomo. | Modern Tropical Luxury Cafe in Mumbai">
+  <meta property="og:description"
+    content="An editorial lifestyle sanctuary bridging modern tropical minimalism and cinematic culinary craft. Located in Santacruz East, Mumbai.">
+  <meta property="og:image" content="https://cafekokomo.com/assets/ambiance/interior_1.png">
+
+  <!-- Instagram Curation Details -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cafe Kokomo. | Luxury Tropical Destination in Mumbai">
+  <meta name="twitter:description"
+    content="Cinematic aesthetics, custom roasts, and modern tropical spaces. 4, Pratap CHS, Santacruz East, Mumbai.">
+
+  <!-- Favicon References -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2.0">
+
+  <!-- Local Business Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Cafe Kokomo.",
+    "image": [
+      "https://cafekokomo.com/assets/ambiance/interior_1.png",
+      "https://cafekokomo.com/menu/coffee/espresso.jpg"
+    ],
+    "@id": "https://cafekokomo.com/#restaurant",
+    "url": "https://cafekokomo.com",
+    "telephone": "+918591515657",
+    "priceRange": "$$$",
+    "servesCuisine": "Specialty Coffee, Modern European Small Plates, Curation Drinks",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4, Pratap CHS Limited, Shivaji Road, near Vakola Bridge, Santacruz East",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400055",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "11:00",
+      "closes": "23:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/cafekokomo"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- LUXURY PRELOADER SCREEN -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="assets/logo.svg" alt="Cafe Kokomo." class="preloader-logo">
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Circle -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header-nav" id="header-nav">
+    <div class="container nav-container">
+      <!-- Minimalist Logo -->
+      <a href="#" class="logo-wrapper" id="nav-logo">
+        <img src="assets/logo.svg" alt="Cafe Kokomo. Emblem" class="logo-icon">
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links-wrapper">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#brand-story" class="nav-link">Story</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#ambiance" class="nav-link">Ambiance</a></li>
+          <li><a href="#reservations" class="nav-link">Reservations</a></li>
+          <li><a href="#location" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action & Toggle -->
+      <div class="nav-actions">
+        <a href="https://www.google.com/maps/reserve/v/dine/c/-5E7tiRYBxA" target="_blank" rel="noopener"
+          class="btn btn-solid cursor-trigger" id="nav-reserve-btn">
+          <span>Reserve a Table</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link" onclick="toggleMobileNav()">Home</a></li>
+      <li><a href="#brand-story" class="nav-link" onclick="toggleMobileNav()">Story</a></li>
+      <li><a href="#menu" class="nav-link" onclick="toggleMobileNav()">Menu</a></li>
+      <li><a href="#ambiance" class="nav-link" onclick="toggleMobileNav()">Ambiance</a></li>
+      <li><a href="#reservations" class="nav-link" onclick="toggleMobileNav()">Reservations</a></li>
+      <li><a href="#location" class="nav-link" onclick="toggleMobileNav()">Contact</a></li>
+    </ul>
+    <a href="https://www.google.com/maps/reserve/v/dine/c/-5E7tiRYBxA" target="_blank" rel="noopener"
+      class="btn btn-outline cursor-trigger" onclick="toggleMobileNav()">
+      <span>Reserve a Table</span>
+    </a>
+  </aside>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="hero">
+      <!-- Slow pacing slideshow bg -->
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slide active" style="background-image: url('assets/ambiance/interior_1.png');"></div>
+        <div class="hero-slide" style="background-image: url('assets/ambiance/outdoor_terrace.png');"></div>
+        <div class="hero-slide" style="background-image: url('assets/ambiance/interior_2.png');"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-main-title"><span class="hero-title-cafe">Cafe</span> <span
+            class="hero-title-kokomo">Kokomo.</span></h1>
+        <p class="hero-subtitle" id="hero-sub"><strong>A Modern Tropical Lifestyle Sanctuary in Mumbai</strong></p>
+
+        <div class="hero-ctas">
+          <a href="#reservations" class="btn btn-solid cursor-trigger" id="hero-cta-reserve">
+            <span>Reserve a Table</span>
+          </a>
+          <a href="#menu" class="btn btn-outline cursor-trigger" id="hero-cta-menu">
+            <span>Explore Menu</span>
+          </a>
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="btn btn-text cursor-trigger" id="hero-cta-ig">
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" onclick="scrollToStory()" id="hero-scroll">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- 2. BRAND STORY SECTION -->
+    <section class="story reveal" id="brand-story">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Text panel -->
+          <div class="story-content">
+            <span class="label-caps">The Curation</span>
+            <h2>A Quiet Escape in Mumbai - Your Calm Corner</h2>
+            <p class="story-text">
+              At Cafe Kokomo., we’re not just about good food — we’re about warm hugs in croissant form, cozy corners,
+              and coffee conversations that linger.
+            </p>
+            <blockquote class="story-quote">
+              "We believe in doing things slow and sweet — sourcing local where we can, growing a few greens of our own,
+              and pouring love into every croissant, brew, and bake."
+            </blockquote>
+            <p>
+              Behind Cafe Kokomo. is a small team with big hearts, passionate about creating a space where people can
+              truly unwind, connect, and feel welcomed. We’re dreamers, bakers, coffee lovers, and hosts who genuinely
+              love bringing people together over good food and warm hospitality.
+            </p>
+            <div style="margin-top: 2.5rem;">
+              <a href="#menu" class="btn btn-outline cursor-trigger">
+                <span>Explore the Exotic</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asymmetrical image grid -->
+          <div class="story-images">
+            <div class="story-img-wrapper story-img-main">
+              <img src="assets/ambiance/interior_1.png" alt="Aesthetic Balinese architecture inside Cafe Kokomo.">
+            </div>
+            <div class="story-img-wrapper story-img-secondary">
+              <img src="assets/ambiance/detail_lifestyle.png"
+                alt="Handcrafted ceramic coffee details on light oak textures">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 3. SIGNATURE MENU SECTION -->
+    <section class="menu reveal" id="menu">
+      <div class="container">
+        <div class="menu-header">
+          <span class="label-caps">The Premium Menu</span>
+          <h2>Exotic Servings</h2>
+          <p>Each recipe is an organic narrative of premium source crops, artisanal wild botanicals, and high-fashion
+            gastronomic layering.</p>
+        </div>
+
+        <!-- Dynamic filters -->
+        <div class="menu-filters" id="menu-filters">
+          <button class="filter-btn active cursor-trigger" data-category="coffee" id="filter-coffee">Coffee</button>
+          <button class="filter-btn cursor-trigger" data-category="signature-drinks" id="filter-signature">Signature
+            Drinks</button>
+          <button class="filter-btn cursor-trigger" data-category="small-plates" id="filter-plates">Small
+            Plates</button>
+          <button class="filter-btn cursor-trigger" data-category="desserts" id="filter-desserts">Desserts</button>
+        </div>
+
+        <!-- Menu Cards Grid (Rendered Dynamically via JS) -->
+        <div class="menu-grid" id="menu-grid"></div>
+      </div>
+    </section>
+
+    <!-- FULLSCREEN PORTFOLIO LIGHTBOX -->
+    <div class="lightbox" id="menu-lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-content">
+        <button class="lightbox-close cursor-trigger" onclick="closeLightbox(event)"
+          aria-label="Close Lightbox">&times;</button>
+        <div class="lightbox-img-pane">
+          <img src="" alt="" id="lightbox-img">
+        </div>
+        <div class="lightbox-info-pane">
+          <span class="label-caps" style="margin-bottom: 0.5rem;">Curation Detail</span>
+          <h3 class="lightbox-title" id="lightbox-title">Item Title</h3>
+          <span class="lightbox-price" id="lightbox-price">₹000</span>
+          <p class="lightbox-desc" id="lightbox-desc">Detailed item description.</p>
+          <a href="#reservations" class="btn btn-solid cursor-trigger" onclick="closeLightbox(event)">
+            <span>Reserve Table to Taste</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 4. AMBIANCE GALLERY -->
+    <section class="ambiance reveal" id="ambiance">
+      <div class="container">
+        <div class="ambiance-header">
+          <div class="title-block">
+            <span class="label-caps">The Sanctuary</span>
+            <h2>Atmosphere. Vibe. Quiet luxury.</h2>
+          </div>
+          <p style="max-width: 450px;">A glimpse into the world of Cafe Kokomo. — a cozy sanctuary of warm textures,
+            tropical greens, soft lighting, and slow coffee moments, designed to feel like an escape from Mumbai’s
+            chaos.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1: Col-8 (Wide) -->
+          <div class="gallery-item col-8 cursor-trigger">
+            <img src="assets/ambiance/interior_1.png" alt="Tropical minimalist light-filled atrium inside Cafe Kokomo.">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Design System</span>
+              <h4 class="gallery-title">The Bali Atrium</h4>
+            </div>
+          </div>
+
+          <!-- Item 2: Col-4 (Tall) -->
+          <div class="gallery-item col-4 cursor-trigger">
+            <img src="assets/ambiance/interior_2.png"
+              alt="Lush philodendron leaves casting shadows on minimal stucco wall">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Organic Shadow</span>
+              <h4 class="gallery-title">Limestone Detail</h4>
+            </div>
+          </div>
+
+          <!-- Item 3: Col-4 -->
+          <div class="gallery-item col-4 cursor-trigger">
+            <img src="assets/ambiance/detail_lifestyle.png"
+              alt="Minimal detail of clean stoneware, citrus slices, and fashion editorial">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Lifestyle Curation</span>
+              <h4 class="gallery-title">Stoneware Detail</h4>
+            </div>
+          </div>
+
+          <!-- Item 4: Col-8 -->
+          <div class="gallery-item col-8 cursor-trigger">
+            <img src="assets/ambiance/outdoor_terrace.png"
+              alt="Aesthetic bamboo terrace lounge of Cafe Kokomo. with ambient lighting">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Social Energy</span>
+              <h4 class="gallery-title">The Canopy Pavilion</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 5. RESERVATION EXPERIENCE -->
+    <section class="reservation reveal" id="reservations">
+      <div class="container">
+        <div class="reservation-grid">
+          <!-- Text Detail -->
+          <div class="reserve-info-pane">
+            <span class="label-caps" style="color: var(--color-black);">The Canopy Table</span>
+            <h2>Exclusive Sensory Seating</h2>
+            <p>
+              To keep the Kokomo. experience calm and intimate, we recommend reserving your table in advance. Our cozy
+              tropical seating is limited, ensuring every visit feels warm, relaxed, and unhurried.
+            </p>
+            <p>
+              For large groups or immediate assistance, feel free to connect with us directly via WhatsApp or phone.
+            </p>
+            <div class="reserve-phone">
+              <div class="phone-label">Reach Directly</div>
+              <a href="tel:+918591515657" class="phone-number cursor-trigger"
+                style="font-size: 1.5rem; display: block;">+91 85915 15657</a>
+            </div>
+          </div>
+
+          <!-- Booking Card -->
+          <div class="reserve-card glass-panel cursor-trigger">
+            <form class="reservation-form" id="reservation-form" onsubmit="compileWhatsAppBooking(event)">
+              <div class="form-group">
+                <label for="booking-name" class="form-label">Full Name</label>
+                <input type="text" id="booking-name" class="form-input" placeholder="e.g. Kabir Sen" required>
+              </div>
+
+              <div class="form-group">
+                <label for="booking-guests" class="form-label">Guests count</label>
+                <select id="booking-guests" class="form-select" required>
+                  <option value="2">2 Guests (Intimate)</option>
+                  <option value="1">1 Guest</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6+">6+ Guests (Requires Call)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="booking-date" class="form-label">Desired Date</label>
+                <input type="date" id="booking-date" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="booking-time" class="form-label">Preferred Time</label>
+                <select id="booking-time" class="form-select" required>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="7:00 PM">7:00 PM</option>
+                  <option value="9:00 PM">9:00 PM</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="booking-notes" class="form-label">Special Requests (Dietary/Seating)</label>
+                <textarea id="booking-notes" class="form-textarea"
+                  placeholder="e.g. Low seating preference, dietary restrictions..."></textarea>
+              </div>
+
+              <div class="reservation-submit">
+                <button type="submit" class="btn btn-solid cursor-trigger" id="reserve-submit-btn">
+                  <span>Send Whatsapp Reservation</span>
+                </button>
+                <div class="reservation-whatsapp-hint">
+                  Secure instant verification via our encrypted <a href="https://wa.me/918591515657"
+                    class="whatsapp-link cursor-trigger" target="_blank" rel="noopener">WhatsApp Concierge Link</a>.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 6. INSTAGRAM SECTION -->
+    <section class="instagram reveal" id="instagram">
+      <div class="container">
+        <div class="menu-header">
+          <span class="label-caps">On the Grid</span>
+          <h2>Visual Chronicles</h2>
+          <p>
+            A visual story of Cafe Kokomo. — capturing cozy corners, warm coffee moments, tropical aesthetics, and the
+            beauty of slow living. Follow our journey through every sip, shadow, and shared moment.
+          </p>
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="btn btn-text cursor-trigger" style="margin-top: 1rem;">
+            @cafekokomo
+          </a>
+        </div>
+
+        <div class="instagram-feed-grid">
+          <!-- Feed Card 1 (Reel Aspect) -->
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="instagram-card aspect-tall cursor-trigger" id="ig-1">
+            <img src="assets/ambiance/interior_1.png"
+              alt="Simulated Instagram Post showing Bali Tropical Lounge Atrium">
+            <div class="instagram-card-overlay">
+              <span class="instagram-icon">&#9658;</span>
+              <div class="instagram-metrics">
+                <span>Likes: 1.2k</span>
+                <span>Comments: 48</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Feed Card 2 (Square Aspect) -->
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="instagram-card aspect-square cursor-trigger" id="ig-2">
+            <img src="menu/signature-drinks/matcha.jpg"
+              alt="Simulated Instagram Post showing matcha latte floral design">
+            <div class="instagram-card-overlay">
+              <span class="instagram-icon">&#9829;</span>
+              <div class="instagram-metrics">
+                <span>Likes: 942</span>
+                <span>Comments: 31</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Feed Card 3 (Reel Aspect) -->
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="instagram-card aspect-tall cursor-trigger" id="ig-3">
+            <img src="assets/ambiance/interior_2.png"
+              alt="Simulated Instagram Post showing beautiful split-leaf philodendron shadows">
+            <div class="instagram-card-overlay">
+              <span class="instagram-icon">&#9658;</span>
+              <div class="instagram-metrics">
+                <span>Likes: 2.1k</span>
+                <span>Comments: 89</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Feed Card 4 (Square Aspect) -->
+          <a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+            class="instagram-card aspect-square cursor-trigger" id="ig-4">
+            <img src="menu/small-plates/toast.jpg" alt="Simulated Instagram Post showing artisanal sourdough plating">
+            <div class="instagram-card-overlay">
+              <span class="instagram-icon">&#9829;</span>
+              <div class="instagram-metrics">
+                <span>Likes: 1.5k</span>
+                <span>Comments: 56</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 7. GOOGLE REVIEWS / TESTIMONIALS -->
+    <section class="testimonials reveal" id="testimonials">
+      <div class="container">
+        <div class="menu-header">
+          <span class="label-caps">The Acclaim</span>
+          <h2>Quiet Reverence</h2>
+          <p>Read the experiences of our valued guests who seek out organic peace and culinary craft in Santacruz East.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card cursor-trigger" id="review-1">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-text">
+              "Had a wonderful experience at Cafe Kokomo. The food was absolutely delicious and well presented. Service
+              was quick, friendly, and attentive. The ambience is cozy and pleasant, making it a perfect place to relax
+              and enjoy good food. Definitely worth visiting again!<br><br>
+              Highly recommend this place for anyone who loves good food and warm vibes!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RB</div>
+              <div class="author-meta">
+                <span class="author-name">Rasika Birvatkar</span>
+                <span class="author-label">Google Local Guide, Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card cursor-trigger" id="review-2">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-text">
+              "I ordered the Belgian Chocolate Panckaes from Cafe Kokomo which I randomly found on Zomato. Nothing but a
+              banger, 10/10 for the presentation, quantity and taste. It did exceed my expectations, for someone who
+              enjoys those fluffy pancackes, I would recommend this place for sure. I look forward to trying more dishes
+              from this place, really impressed."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RS</div>
+              <div class="author-meta">
+                <span class="author-name">Rushin Shah</span>
+                <span class="author-label">Lifestyle Columnist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card cursor-trigger" id="review-3">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-text">
+              "A lovely hangout spot in the heart of Santacruz East!<br>
+              Visited Cafe Kokomo and had an absolutely delightful experience. I ordered their pesto spaghetti pasta and
+              chicken-loaded fries—both were packed with flavor and beautifully plated. The passion fruit iced tea was
+              refreshing and the perfect complement to the meal."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MB</div>
+              <div class="author-meta">
+                <span class="author-name">Merreeda beno</span>
+                <span class="author-label">Creative Director</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. LOCATION SECTION -->
+    <section class="location reveal" id="location">
+      <div class="location-grid">
+        <!-- Interactive Custom styled Google Map -->
+        <div class="map-container" id="google-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.1895780517865!2d72.84918731490217!3d19.055423887098485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c928424cb4d1%3A0xcb1b72b83b3e8e1!2sPratap%20CHS%20Ltd!5e0!3m2!1sen!2sin!4v1684618037300!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Cafe Kokomo. Location Map, Santacruz East, Mumbai">
+          </iframe>
+
+          <!-- Floating Location Fetcher Widget -->
+          <div class="map-overlay-card glass-panel reveal">
+            <h4 class="overlay-title">Escape to the Sanctuary</h4>
+            <p class="overlay-desc">Locate Cafe Kokomo. in Santacruz East.</p>
+            <div id="location-fetcher-status" class="fetcher-status-pane" style="display: none;"></div>
+            <button class="btn btn-solid btn-small cursor-trigger" id="fetch-location-btn"
+              onclick="fetchDistanceToKokomo()">
+              <span>Fetch My Location</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Detail Panel -->
+        <div class="location-info-pane">
+          <div class="loc-block">
+            <span class="loc-label">Locate Us</span>
+            <div class="loc-val" id="loc-address-text">
+              <strong>Cafe Kokomo.</strong><br>
+              Pratap CHS Limited, 4, Shivaji Road,<br>
+              near Vakola Bridge, Pratiksha Nagar,<br>
+              Vakola, Santacruz East, Mumbai,<br>
+              Maharashtra 400055<br>
+              <span
+                style="font-size: 0.85rem; opacity: 0.7; display: block; margin-top: 0.4rem; font-family: var(--font-body);">Plus
+                Code: 3RGX+XP Mumbai, Maharashtra</span>
+            </div>
+          </div>
+
+          <div class="loc-block">
+            <span class="loc-label">Opening Rituals</span>
+            <ul class="opening-hours">
+              <li>
+                <span class="day">Monday – Sunday</span>
+                <span class="time">11:00 AM – 11:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="loc-block">
+            <span class="loc-label">Inquiries</span>
+            <div class="loc-val" style="font-size: 1.1rem; line-height: 1.6;">
+              info@cafekokomo.com<br>
+              kokomomumbai@gmail.com<br>
+              +91 85915 15657
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. FOOTER (DEEP BLACK ACCENT) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Pane -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.svg" alt="Cafe Kokomo. Logo" class="footer-logo-icon">
+          </a>
+          <p>
+            A modern tropical escape where thoughtful design, cozy aesthetics, and beautifully curated food come
+            together to create a warm and cinematic café experience. ✨
+          </p>
+        </div>
+
+        <!-- Links Pane 1 -->
+        <div>
+          <h4 class="footer-col-title">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="cursor-trigger">Home</a></li>
+            <li><a href="#brand-story" class="cursor-trigger">Our Story</a></li>
+            <li><a href="#menu" class="cursor-trigger">Curation Menu</a></li>
+            <li><a href="#ambiance" class="cursor-trigger">The Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Pane 2 -->
+        <div>
+          <h4 class="footer-col-title">Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="#reservations" class="cursor-trigger">Reservations</a></li>
+            <li><a href="#location" class="cursor-trigger">Google Maps</a></li>
+            <li><a href="javascript:void(0)" id="footer-order-online" class="cursor-trigger">Order Online</a></li>
+            <li><a href="https://www.instagram.com/cafekokomo" target="_blank" rel="noopener"
+                class="cursor-trigger">Instagram Feed</a></li>
+          </ul>
+        </div>
+
+        <!-- Address/Hours Pane -->
+        <div>
+          <h4 class="footer-col-title">Address & Hours</h4>
+          <address class="footer-address">
+            Pratap CHS Limited, 4, Shivaji Road,<br>
+            near Vakola Bridge, Pratiksha Nagar,<br>
+            Vakola, Santacruz East, Mumbai,<br>
+            Maharashtra 400055
+          </address>
+          <div style="margin-top: 1rem; font-size: 0.9rem; color: rgba(244, 243, 239, 0.5);">
+            Daily: 11 AM – 11 PM
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="footer-copy" id="footer-copyright">
+          &copy; <span id="current-year">2026</span> Cafe Kokomo. Designed for Luxury Curation. All Rights Reserved.
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/cafekokomo" class="footer-social-link cursor-trigger" target="_blank"
+            rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Core JavaScript -->
+  <script src="app.js?v=2.0"></script>
+</body>
+
+</html>

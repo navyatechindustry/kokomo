@@ -1,0 +1,19 @@
+{
+  "name": "cafe-kokomo-website",
+  "version": "1.0.0",
+  "description": "Premium cinematic modern tropical luxury cafe website for Cafe Kokomo in Mumbai.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8000 -c-1",
+    "start": "npx -y http-server -p 8000 -c-1"
+  },
+  "keywords": [
+    "luxury",
+    "cafe",
+    "mumbai",
+    "tropical",
+    "minimalism"
+  ],
+  "author": "Cafe Kokomo Curation",
+  "license": "ISC"
+}
