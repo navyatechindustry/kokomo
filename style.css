@@ -589,8 +589,9 @@ body.cursor-hover .custom-cursor {
   text-shadow: 0 0 8px rgba(34, 166, 82, 0.3);
 }
 
-/* Premium atmospheric green glow & elevation transitions for Reserve CTA buttons */
-#nav-reserve-btn,
+/* Premium atmospheric green glow & elevation transitions for CTA buttons */
+#nav-order-btn,
+#mobile-order-btn,
 #hero-cta-reserve,
 #reserve-submit-btn,
 .lightbox-info-pane .btn-solid {
@@ -602,7 +603,8 @@ body.cursor-hover .custom-cursor {
               color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#nav-reserve-btn:hover,
+#nav-order-btn:hover,
+#mobile-order-btn:hover,
 #hero-cta-reserve:hover,
 #reserve-submit-btn:hover,
 .lightbox-info-pane .btn-solid:hover {
@@ -870,7 +872,7 @@ body.cursor-hover .custom-cursor {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate3d(-50%, 30px, 0);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -878,7 +880,7 @@ body.cursor-hover .custom-cursor {
   gap: 0.5rem;
   cursor: pointer;
   opacity: 0;
-  animation: fadeInUpHero 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+  animation: fadeInUpScrollIndicator 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
 }
 
 .scroll-text {
@@ -913,6 +915,13 @@ body.cursor-hover .custom-cursor {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpScrollIndicator {
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -2302,9 +2311,11 @@ body.cursor-hover .custom-cursor {
    ========================================== */
 .map-overlay-card {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
   z-index: 10;
+  width: 90%;
   max-width: 320px;
   padding: 1.5rem;
   border-radius: var(--border-radius);
@@ -2313,7 +2324,7 @@ body.cursor-hover .custom-cursor {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(5, 5, 5, 0.08);
   box-shadow: 0 15px 40px rgba(5, 5, 5, 0.08);
-  transition: var(--transition-smooth);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -2321,9 +2332,9 @@ body.cursor-hover .custom-cursor {
 }
 
 .map-overlay-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(34, 166, 82, 0.15);
-  border-color: rgba(34, 166, 82, 0.2);
+  transform: translate3d(-50%, -53%, 0);
+  box-shadow: 0 20px 40px rgba(34, 166, 82, 0.25);
+  border-color: rgba(34, 166, 82, 0.3);
 }
 
 .overlay-title {
@@ -2374,10 +2385,16 @@ body.cursor-hover .custom-cursor {
 
 @media (max-width: 575px) {
   .map-overlay-card {
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    max-width: none;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    bottom: auto;
+    right: auto;
+    width: 88vw;
+    max-width: 300px;
+  }
+  .map-overlay-card:hover {
+    transform: translate3d(-50%, -53%, 0);
   }
 }
 

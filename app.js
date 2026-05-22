@@ -1167,10 +1167,16 @@ function fetchDistanceToKokomo() {
    L. FOOTER ORDER ONLINE POPUP SYSTEM
    ========================================== */
 function initOrderOnlinePopup() {
-  const orderBtn = document.getElementById("footer-order-online");
-  if (orderBtn) {
-    orderBtn.addEventListener("click", openOrderModal);
-  }
+  const orderButtons = [
+    document.getElementById("footer-order-online"),
+    document.getElementById("nav-order-btn"),
+    document.getElementById("mobile-order-btn")
+  ];
+  orderButtons.forEach((btn) => {
+    if (btn) {
+      btn.addEventListener("click", openOrderModal);
+    }
+  });
 }
 
 function openOrderModal() {
